@@ -5,7 +5,9 @@ if [ -z "$1" ]; then
 fi
 
 nombre=$1
-mkdir -p "$nombre"
+if [ ! -d "$nombre" ]; then
+  mkdir "$nombre"
+fi
 
 echo "$nombre" >> ganador.txt
 

@@ -1,0 +1,16 @@
+
+if [ -z "$1" ]; then
+  echo "Por favor, proporciona un nombre como parámetro."
+  exit 1
+fi
+
+nombre=$1
+if [ ! -d "$nombre" ]; then
+  mkdir "$nombre"
+fi
+
+echo "$nombre" >> ganador.txt
+
+echo "Carpeta '~$nombre' creada y nombre añadido al archivo ganadro.txt"
+
+
